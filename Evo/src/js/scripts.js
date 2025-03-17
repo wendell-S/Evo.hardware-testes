@@ -108,6 +108,103 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(showRandomLetters, 1000); // Mostrar letras aleatórias na tela a cada segundo
 
+    // Função para acompanhar o movimento do mouse
+    const images = document.querySelectorAll('section img');
+    images.forEach(img => {
+        img.addEventListener('mousemove', followMouse);
+    });
+
+    function followMouse(e) {
+        const rect = e.target.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        const moveX = (x - 0.5) * 10; // Ajustar a intensidade do movimento
+        const moveY = (y - 0.5) * 10; // Ajustar a intensidade do movimento
+        e.target.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+    }
+
+    images.forEach(img => {
+        img.addEventListener('mouseleave', () => {
+            img.style.transform = 'translate(0, 0) scale(1)';
+        });
+    });
+
+    // Função para alterar o tema do site
+    const themeToggleButton = document.createElement('button');
+    themeToggleButton.textContent = 'Alterar Tema';
+    themeToggleButton.style.position = 'fixed';
+    themeToggleButton.style.top = '10px';
+    themeToggleButton.style.right = '10px';
+    document.body.appendChild(themeToggleButton);
+
+    themeToggleButton.addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+    });
+
+    // Função para exibir uma mensagem de boas-vindas
+    function showWelcomeMessage() {
+        const welcomeMessage = document.createElement('div');
+        welcomeMessage.textContent = 'Bem-vindo ao site Evo. Hardwares!';
+        welcomeMessage.style.position = 'fixed';
+        welcomeMessage.style.bottom = '10px';
+        welcomeMessage.style.right = '10px';
+        welcomeMessage.style.backgroundColor = '#4caf50';
+        welcomeMessage.style.color = '#ffffff';
+        welcomeMessage.style.padding = '10px';
+        welcomeMessage.style.borderRadius = '5px';
+        document.body.appendChild(welcomeMessage);
+
+        setTimeout(() => {
+            document.body.removeChild(welcomeMessage);
+        }, 5000);
+    }
+
+    showWelcomeMessage();
+
+    // Função para adicionar um botão de voltar ao topo
+    const backToTopButton = document.createElement('button');
+    backToTopButton.textContent = 'Voltar ao Topo';
+    backToTopButton.style.position = 'fixed';
+    backToTopButton.style.bottom = '10px';
+    backToTopButton.style.left = '10px';
+    backToTopButton.style.display = 'none';
+    document.body.appendChild(backToTopButton);
+
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 200) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    // Função para exibir a data e hora atual
+    function showDateTime() {
+        const dateTimeElement = document.createElement('div');
+        dateTimeElement.style.position = 'fixed';
+        dateTimeElement.style.top = '10px';
+        dateTimeElement.style.left = '10px';
+        dateTimeElement.style.backgroundColor = '#1f1f1f';
+        dateTimeElement.style.color = '#ffffff';
+        dateTimeElement.style.padding = '10px';
+        dateTimeElement.style.borderRadius = '5px';
+        document.body.appendChild(dateTimeElement);
+
+        function updateDateTime() {
+            const now = new Date();
+            dateTimeElement.textContent = now.toLocaleString();
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    }
+
+    showDateTime();
+
     // Remover a funcionalidade do mural dos leitores
     // const muralForm = document.getElementById('mural-form');
     // const muralList = document.getElementById('mural-list');

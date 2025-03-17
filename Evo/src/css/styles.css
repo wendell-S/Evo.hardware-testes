@@ -103,12 +103,32 @@ section img {
     object-fit: contain; /* Ajustar a proporção das imagens */
     box-sizing: border-box; /* Garantir que a borda fique dentro da imagem */
     animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
-    transition: transform 0.3s, box-shadow 0.3s; /* Adicionar transição para hover */
+    transition: transform 0.3s, box-shadow 0.3s, translate 0.3s; /* Adicionar transição para hover */
+    position: relative;
 }
 
 section img:hover {
-    transform: scale(1.05); /* Aumentar levemente ao passar o mouse */
-    box-shadow: 0 0 15px 5px rgba(76, 175, 80, 0.5); /* Adicionar sombra com cor de destaque */
+    transform: scale(1.05) translate(10px, 10px); /* Aumentar levemente e mover ao passar o mouse */
+}
+
+section img:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: followMouse 0.3s ease-in-out;
+}
+
+@keyframes followMouse {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(10px, 10px);
+    }
 }
 
 button {
