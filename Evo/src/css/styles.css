@@ -275,6 +275,53 @@ h1.evolucao {
 
     section {
         padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Reduzir o tamanho do título */
+        text-align: center; /* Centralizar o título */
+    }
+
+    section p {
+        font-size: 1rem; /* Reduzir o tamanho do texto */
+        line-height: 1.4; /* Ajustar o espaçamento entre linhas */
+    }
+
+    section .image-container {
+        flex-direction: column; /* Empilhar as imagens verticalmente */
+        align-items: center; /* Centralizar as imagens */
+    }
+
+    section img {
+        width: 90%; /* Ajustar a largura para ocupar quase toda a tela */
+        margin-bottom: 1rem; /* Adicionar espaçamento entre as imagens */
+    }
+
+    #game-banner {
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+    }
+
+    .block {
+        width: 40px; /* Diminuir o tamanho dos blocos */
+        height: 40px;
+        font-size: 1.2rem; /* Ajustar o tamanho da fonte */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Reduzir o tamanho do texto no rodapé */
+    }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
     }
 
     section img {
