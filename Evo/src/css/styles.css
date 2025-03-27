@@ -132,18 +132,40 @@ section img:hover::after {
 }
 
 button {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     background-color: #4caf50; /* Fundo do botão verde */
     color: #ffffff; /* Texto do botão claro */
     border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s; /* Adicionar transição para hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra inicial */
 }
 
 button:hover {
     background-color: #388e3c; /* Fundo do botão ao passar o mouse */
     transform: scale(1.1); /* Aumentar levemente ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+button:active {
+    transform: scale(0.95); /* Reduzir levemente ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaçamento entre os botões */
+    margin: 1.5rem 0; /* Margem superior e inferior */
+    flex-wrap: wrap; /* Ajustar para dispositivos menores */
+}
+
+#menu button {
+    flex: 1 1 auto; /* Tornar os botões responsivos */
+    max-width: 200px; /* Largura máxima dos botões */
 }
 
 footer {
