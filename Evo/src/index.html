@@ -14,7 +14,47 @@
         </reader>
         <img src="/evo/src/imagens/evo.png" alt="Faixa horizontal" class="faixa-horizontal">
     </header>
+
+    <!-- Menu de navegação -->
+    <nav id="menu">
+        <button onclick="mostrarSecao('processadores')">Processadores</button>
+        <button onclick="mostrarSecao('placas-video')">Placas de Vídeo</button>
+        <button onclick="mostrarSecao('memoria-ram')">Memória RAM</button>
+        <button onclick="mostrarSecao('placas-mae')">Placas-mãe</button>
+        <button onclick="mostrarSecao('fonte-alimentacao')">Fonte de Alimentação</button>
+    </nav>
+
     <main>
+        <!-- Seção de Processadores -->
+        <section id="processadores" class="conteudo-secao" style="display: none;">
+            <h2>Processadores</h2>
+            <p>Informações sobre processadores...</p>
+        </section>
+
+        <!-- Seção de Placas de Vídeo -->
+        <section id="placas-video" class="conteudo-secao" style="display: none;">
+            <h2>Placas de Vídeo</h2>
+            <p>Informações sobre placas de vídeo...</p>
+        </section>
+
+        <!-- Seção de Memória RAM -->
+        <section id="memoria-ram" class="conteudo-secao" style="display: none;">
+            <h2>Memória RAM</h2>
+            <p>Informações sobre memória RAM...</p>
+        </section>
+
+        <!-- Seção de Placas-mãe -->
+        <section id="placas-mae" class="conteudo-secao" style="display: none;">
+            <h2>Placas-mãe</h2>
+            <p>Informações sobre placas-mãe...</p>
+        </section>
+
+        <!-- Seção de Fonte de Alimentação -->
+        <section id="fonte-alimentacao" class="conteudo-secao" style="display: none;">
+            <h2>Fonte de Alimentação</h2>
+            <p>Informações sobre fonte de alimentação...</p>
+        </section>
+
         <section id="section1">
             <h2>1ª Geração - Válvulas Electrónicas 1946 - 1957</h2>
             <div class="image-container">
@@ -86,5 +126,18 @@
         <p>&copy; 2025 Evo. Hardwares</p>
     </footer>
     <script src="js/scripts.js"></script>
+    <script>
+        function mostrarSecao(id) {
+            // Oculta todas as seções
+            const secoes = document.querySelectorAll('.conteudo-secao');
+            secoes.forEach(secao => secao.style.display = 'none');
+
+            // Mostra a seção selecionada
+            const secaoSelecionada = document.getElementById(id);
+            if (secaoSelecionada) {
+                secaoSelecionada.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
