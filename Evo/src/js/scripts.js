@@ -240,3 +240,13 @@ document.addEventListener('DOMContentLoaded', function() {
     //     }
     // });
 });
+
+function mostrarTodasGeracoes() {
+    // Oculta todas as seções de conteúdo
+    const secoes = document.querySelectorAll('.conteudo-secao');
+    secoes.forEach(secao => secao.style.display = 'none');
+
+    // Mostra todas as seções sobre as gerações de hardware
+    const secoesGeracoes = document.querySelectorAll('#section1, #section2, #section3, #section4, #section5');
+    secoesGeracoes.forEach(secao => secao.style.display = 'block');
+}

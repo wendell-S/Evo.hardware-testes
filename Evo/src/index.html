@@ -22,6 +22,10 @@
         <button onclick="mostrarSecao('memoria-ram')">Memória RAM</button>
         <button onclick="mostrarSecao('placas-mae')">Placas-mãe</button>
         <button onclick="mostrarSecao('fonte-alimentacao')">Fonte de Alimentação</button>
+        <!-- Botão de "casinha" -->
+        <button onclick="mostrarTodasGeracoes()" title="Voltar para as histórias das gerações">
+            🏠
+        </button>
     </nav>
 
     <main>
@@ -114,23 +118,27 @@
             <p><strong>Evolução dos Microprocessadores:</strong> Para ilustrar o progresso tecnológico, podemos acompanhar a trajetória dos processadores da Intel, observando como cada geração impulsiona novas possibilidades.</p>
         </section>
     </main>
-    <section id="game-banner">
+    <!-- <section id="game-banner">
         <div id="game-container">
             <div class="block" draggable="true" style="background-color: red;"></div>
             <div class="block" draggable="true" style="background-color: blue;"></div>
             <div class="block" draggable="true" style="background-color: green;"></div>
             <div class="block" draggable="true" style="background-color: yellow;"></div>
         </div>
-    </section>
+    </section> -->
     <footer>
         <p>&copy; 2025 Evo. Hardwares</p>
     </footer>
     <script src="js/scripts.js"></script>
     <script>
         function mostrarSecao(id) {
-            // Oculta todas as seções
+            // Oculta todas as seções de conteúdo
             const secoes = document.querySelectorAll('.conteudo-secao');
             secoes.forEach(secao => secao.style.display = 'none');
+
+            // Oculta as seções sobre as gerações de hardware
+            const secoesGeracoes = document.querySelectorAll('#section1, #section2, #section3, #section4, #section5');
+            secoesGeracoes.forEach(secao => secao.style.display = 'none');
 
             // Mostra a seção selecionada
             const secaoSelecionada = document.getElementById(id);
