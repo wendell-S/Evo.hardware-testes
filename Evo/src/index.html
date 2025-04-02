@@ -133,6 +133,42 @@
             </div>
             <button onclick="voltarParaProcessadores()">Voltar</button>
         </section>
+
+        <!-- Seção de Detalhes de Placas de Vídeo -->
+        <section id="detalhes-placas-video" class="conteudo-secao" style="display: none;">
+            <h2 id="titulo-placas-video"></h2>
+            <div id="conteudo-placas-video">
+                <!-- Informações detalhadas sobre placas de vídeo serão inseridas aqui -->
+            </div>
+            <button onclick="voltarParaPlacasVideo()">Voltar</button>
+        </section>
+
+        <!-- Seção de Detalhes de Memória RAM -->
+        <section id="detalhes-memoria-ram" class="conteudo-secao" style="display: none;">
+            <h2 id="titulo-memoria-ram"></h2>
+            <div id="conteudo-memoria-ram">
+                <!-- Informações detalhadas sobre memória RAM serão inseridas aqui -->
+            </div>
+            <button onclick="voltarParaMemoriaRAM()">Voltar</button>
+        </section>
+
+        <!-- Seção de Detalhes de Placas-mãe -->
+        <section id="detalhes-placas-mae" class="conteudo-secao" style="display: none;">
+            <h2 id="titulo-placas-mae"></h2>
+            <div id="conteudo-placas-mae">
+                <!-- Informações detalhadas sobre placas-mãe serão inseridas aqui -->
+            </div>
+            <button onclick="voltarParaPlacasMae()">Voltar</button>
+        </section>
+
+        <!-- Seção de Detalhes de Fonte de Alimentação -->
+        <section id="detalhes-fonte-alimentacao" class="conteudo-secao" style="display: none;">
+            <h2 id="titulo-fonte-alimentacao"></h2>
+            <div id="conteudo-fonte-alimentacao">
+                <!-- Informações detalhadas sobre fonte de alimentação serão inseridas aqui -->
+            </div>
+            <button onclick="voltarParaFonteAlimentacao()">Voltar</button>
+        </section>
     </main>
     <!-- <section id="game-banner">
         <div id="game-container">
@@ -248,6 +284,108 @@
             const processadores = document.getElementById('processadores');
             if (processadores) {
                 processadores.style.display = 'block';
+            }
+        }
+
+        function mostrarDetalhesPlacasVideo() {
+            // Oculta todas as seções
+            const secoes = document.querySelectorAll('.conteudo-secao');
+            secoes.forEach(secao => secao.style.display = 'none');
+
+            // Mostra a seção de detalhes de placas de vídeo
+            const detalhesPlacasVideo = document.getElementById('detalhes-placas-video');
+            const tituloPlacasVideo = document.getElementById('titulo-placas-video');
+            const conteudoPlacasVideo = document.getElementById('conteudo-placas-video');
+
+            if (detalhesPlacasVideo && tituloPlacasVideo && conteudoPlacasVideo) {
+                detalhesPlacasVideo.style.display = 'block';
+                tituloPlacasVideo.textContent = 'Detalhes sobre Placas de Vídeo';
+                conteudoPlacasVideo.innerHTML = `
+                    <p>Informações detalhadas sobre placas de vídeo...</p>
+                    <ul>
+                        <li>Placa de Vídeo 1: Detalhes...</li>
+                        <li>Placa de Vídeo 2: Detalhes...</li>
+                    </ul>
+                `;
+            }
+        }
+
+        function voltarParaPlacasVideo() {
+            // Oculta a seção de detalhes e volta para a seção de placas de vídeo
+            const detalhesPlacasVideo = document.getElementById('detalhes-placas-video');
+            if (detalhesPlacasVideo) {
+                detalhesPlacasVideo.style.display = 'none';
+            }
+
+            const placasVideo = document.getElementById('placas-video');
+            if (placasVideo) {
+                placasVideo.style.display = 'block';
+            }
+        }
+
+        function mostrarDetalhesMemoriaRAM() {
+            const secoes = document.querySelectorAll('.conteudo-secao');
+            secoes.forEach(secao => secao.style.display = 'none');
+
+            const detalhesMemoriaRAM = document.getElementById('detalhes-memoria-ram');
+            const tituloMemoriaRAM = document.getElementById('titulo-memoria-ram');
+            const conteudoMemoriaRAM = document.getElementById('conteudo-memoria-ram');
+
+            if (detalhesMemoriaRAM && tituloMemoriaRAM && conteudoMemoriaRAM) {
+                detalhesMemoriaRAM.style.display = 'block';
+                tituloMemoriaRAM.textContent = 'Detalhes sobre Memória RAM';
+                conteudoMemoriaRAM.innerHTML = `
+                    <p>Informações detalhadas sobre memória RAM...</p>
+                    <ul>
+                        <li>Módulo RAM 1: Detalhes...</li>
+                        <li>Módulo RAM 2: Detalhes...</li>
+                    </ul>
+                `;
+            }
+        }
+
+        function voltarParaMemoriaRAM() {
+            const detalhesMemoriaRAM = document.getElementById('detalhes-memoria-ram');
+            if (detalhesMemoriaRAM) {
+                detalhesMemoriaRAM.style.display = 'none';
+            }
+
+            const memoriaRAM = document.getElementById('memoria-ram');
+            if (memoriaRAM) {
+                memoriaRAM.style.display = 'block';
+            }
+        }
+
+        function mostrarDetalhesPlacasMae() {
+            const secoes = document.querySelectorAll('.conteudo-secao');
+            secoes.forEach(secao => secao.style.display = 'none');
+
+            const detalhesPlacasMae = document.getElementById('detalhes-placas-mae');
+            const tituloPlacasMae = document.getElementById('titulo-placas-mae');
+            const conteudoPlacasMae = document.getElementById('conteudo-placas-mae');
+
+            if (detalhesPlacasMae && tituloPlacasMae && conteudoPlacasMae) {
+                detalhesPlacasMae.style.display = 'block';
+                tituloPlacasMae.textContent = 'Detalhes sobre Placas-mãe';
+                conteudoPlacasMae.innerHTML = `
+                    <p>Informações detalhadas sobre placas-mãe...</p>
+                    <ul>
+                        <li>Placa-mãe 1: Detalhes...</li>
+                        <li>Placa-mãe 2: Detalhes...</li>
+                    </ul>
+                `;
+            }
+        }
+
+        function voltarParaPlacasMae() {
+            const detalhesPlacasMae = document.getElementById('detalhes-placas-mae');
+            if (detalhesPlacasMae) {
+                detalhesPlacasMae.style.display = 'none';
+            }
+
+            const placasMae = document.getElementById('placas-mae');
+            if (placasMae) {
+                placasMae.style.display = 'block';
             }
         }
     </script>
