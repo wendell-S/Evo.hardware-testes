@@ -132,6 +132,7 @@ section img:hover::after {
 }
 
 button {
+    position: relative; /* Necessário para o pseudo-elemento */
     padding: 0.8rem 1.5rem;
     background-color: #4caf50; /* Fundo do botão verde */
     color: #ffffff; /* Texto do botão claro */
@@ -142,6 +143,24 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+    overflow: hidden; /* Garantir que o pseudo-elemento não ultrapasse os limites */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Centralizar verticalmente */
+    left: 0;
+    width: 100%;
+    height: 50%; /* Metade do botão */
+    background-color: rgba(128, 128, 128, 0.5); /* Cinza translúcido */
+    transform: translateY(-100%); /* Esconder fora do botão */
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+    z-index: 0; /* Garantir que fique atrás do texto */
+}
+
+button:hover::before {
+    transform: translateY(0); /* Mostrar a faixa ao passar o mouse */
 }
 
 button:hover {
@@ -151,8 +170,17 @@ button:hover {
 }
 
 button:active {
+    background-color: #808080; /* Fundo cinza ao clicar */
+    color: #ffffff; /* Texto claro */
     transform: scale(0.95); /* Reduzir levemente ao clicar */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+}
+
+button.active-button {
+    background-color: #808080; /* Fundo cinza para o botão selecionado */
+    color: #ffffff; /* Texto claro */
+    box-shadow: 0 6px 12px rgba(128, 128, 128, 0.5); /* Sombra destacada */
+    transform: scale(1.15); /* Aumentar levemente o botão ativo */
 }
 
 #menu {

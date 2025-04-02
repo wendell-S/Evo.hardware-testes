@@ -239,6 +239,42 @@ document.addEventListener('DOMContentLoaded', function() {
     //         nameInput.value = '';
     //     }
     // });
+
+    // Adicionar feedback visual ao clicar em um botão
+    const buttons = document.querySelectorAll('#menu button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('active-button'));
+            button.classList.add('active-button');
+        });
+    });
+
+    // Adicionar animação ao passar o mouse sobre os botões
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'scale(1.1)';
+            button.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.3)';
+        });
+
+        button.addEventListener('mouseleave', () => {
+            if (!button.classList.contains('active-button')) {
+                button.style.transform = 'scale(1)';
+                button.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.2)';
+            }
+        });
+
+        button.addEventListener('mousedown', () => {
+            button.style.transform = 'scale(0.95)';
+            button.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
+        });
+
+        button.addEventListener('mouseup', () => {
+            if (!button.classList.contains('active-button')) {
+                button.style.transform = 'scale(1.1)';
+                button.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.3)';
+            }
+        });
+    });
 });
 
 function mostrarTodasGeracoes() {
