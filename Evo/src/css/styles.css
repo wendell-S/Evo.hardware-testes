@@ -1,3 +1,8 @@
+html, body {
+    height: 100%; /* Garantir que o HTML e o corpo ocupem toda a altura da janela */
+    overflow-x: hidden; /* Remover rolagem horizontal */
+}
+
 body {
     font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
     margin: 0;
@@ -6,6 +11,9 @@ body {
     color: #e0e0e0; /* Texto claro */
     position: relative;
     overflow-x: hidden; /* Remover rolagem horizontal */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que o corpo ocupe toda a altura da janela */
 }
 
 body::before {
@@ -59,6 +67,7 @@ header {
 }
 
 main {
+    flex: 1; /* Fazer o conteúdo principal ocupar o espaço disponível */
     padding: 2rem;
     animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
 }
@@ -153,7 +162,7 @@ button::before {
     left: 0;
     width: 100%;
     height: 50%; /* Metade do botão */
-    background-color: rgba(128, 128, 128, 0.5); /* Cinza translúcido */
+    background-color: rgba(0, 0, 0, 0.338); /* Cinza translúcido */
     transform: translateY(-100%); /* Esconder fora do botão */
     transition: transform 0.3s ease-in-out; /* Transição suave */
     z-index: 0; /* Garantir que fique atrás do texto */
@@ -164,13 +173,13 @@ button:hover::before {
 }
 
 button:hover {
-    background-color: #388e3c; /* Fundo do botão ao passar o mouse */
+    background-color: #108cde; /* Fundo do botão ao passar o mouse */
     transform: scale(1.1); /* Aumentar levemente ao passar o mouse */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
 
 button:active {
-    background-color: #808080; /* Fundo cinza ao clicar */
+    background-color: #0509ff; /* Fundo cinza ao clicar */
     color: #ffffff; /* Texto claro */
     transform: scale(0.95); /* Reduzir levemente ao clicar */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
@@ -201,12 +210,11 @@ footer {
     color: #ffffff; /* Texto do rodapé claro */
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
     border-top: 2px solid; /* Adicionar borda superior */
-    border-image: linear-gradient(to right, #4caf50, #2196f3) 1; /* Mesclar verde com azul */
+    border-image: linear-gradient(to right, #46a45d, #2196f3) 1; /* Mesclar verde com azul */
+    animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
+    position: relative; /* Remover posição fixa */
+    width: 100%;
 }
 
 h1.evolucao {
