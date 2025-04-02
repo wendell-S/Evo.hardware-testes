@@ -57,13 +57,13 @@ body:hover::after {
 
 header {
     background-color: #1f1f1f; /* Fundo do cabeçalho escuro */
-    color: #4caf50; /* Texto do cabeçalho verde */
+    color: #ff4c4c; /* Texto do cabeçalho vermelho */
     padding: 1rem;
     text-align: center;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(76, 175, 80, 0.5); /* Adicionar sombra com desfoque */
     animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
     border-bottom: 2px solid; /* Adicionar borda inferior */
-    border-image: linear-gradient(to right, #4caf50, #2196f3) 1; /* Mesclar verde com azul */
+    border-image: linear-gradient(to right, #ff4c4c, #2196f3) 1; /* Mesclar vermelho com azul */
 }
 
 main {
@@ -77,14 +77,14 @@ section {
     padding: 2rem;
     background-color: #2c2c2c; /* Fundo das seções escuro */
     border: 2px solid; /* Adicionar borda */
-    border-image: linear-gradient(to right, #4caf50, #2196f3) 1; /* Mesclar verde com azul */
+    border-image: linear-gradient(to right, #ff4c4c, #2196f3) 1; /* Mesclar vermelho com azul */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(76, 175, 80, 0.5); /* Adicionar sombra com desfoque */
     animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
 }
 
 section h2 {
-    color: #4caf50; /* Título verde */
+    color: #ff4c4c; /* Título vermelho */
     animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
 }
 
@@ -143,7 +143,7 @@ section img:hover::after {
 button {
     position: relative; /* Necessário para o pseudo-elemento */
     padding: 0.8rem 1.5rem;
-    background-color: #4caf50; /* Fundo do botão verde */
+    background-color: #ff4c4c; /* Fundo do botão vermelho */
     color: #ffffff; /* Texto do botão claro */
     border: none;
     border-radius: 25px; /* Bordas arredondadas */
@@ -173,7 +173,7 @@ button:hover::before {
 }
 
 button:hover {
-    background-color: #006115; /* Fundo do botão ao passar o mouse */
+    background-color: #b33939; /* Fundo do botão ao passar o mouse (vermelho escuro) */
     transform: scale(1.1); /* Aumentar levemente ao passar o mouse */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
@@ -211,14 +211,14 @@ footer {
     text-align: center;
     padding: 1rem;
     border-top: 2px solid; /* Adicionar borda superior */
-    border-image: linear-gradient(to right, #46a45d, #2196f3) 1; /* Mesclar verde com azul */
+    border-image: linear-gradient(to right, #ff4c4c, #2196f3) 1; /* Mesclar vermelho com azul */
     animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
     position: relative; /* Remover posição fixa */
     width: 100%;
 }
 
 h1.evolucao {
-    color: #4caf50; /* Cor verde estática */
+    color: #ff4c4c; /* Cor vermelha estática */
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(76, 175, 80, 0.5); /* Adicionar sombra com desfoque */
 }
 
