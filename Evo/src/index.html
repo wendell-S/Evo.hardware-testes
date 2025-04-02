@@ -46,25 +46,49 @@
         <!-- Seção de Placas de Vídeo -->
         <section id="placas-video" class="conteudo-secao" style="display: none;">
             <h2>Placas de Vídeo</h2>
-            <p>Informações sobre placas de vídeo...</p>
+            <p>Selecione a geração de placas de vídeo para saber mais:</p>
+            <select id="geracao-placas-video" onchange="mostrarGeracaoPlacasVideo(this.value)">
+                <option value="">-- Escolha uma geração --</option>
+                <option value="video-gen1">1ª Geração</option>
+                <option value="video-gen2">2ª Geração</option>
+                <option value="video-gen3">3ª Geração</option>
+            </select>
         </section>
 
         <!-- Seção de Memória RAM -->
         <section id="memoria-ram" class="conteudo-secao" style="display: none;">
             <h2>Memória RAM</h2>
-            <p>Informações sobre memória RAM...</p>
+            <p>Selecione a geração de memória RAM para saber mais:</p>
+            <select id="geracao-memoria-ram" onchange="mostrarGeracaoMemoriaRAM(this.value)">
+                <option value="">-- Escolha uma geração --</option>
+                <option value="ram-gen1">1ª Geração</option>
+                <option value="ram-gen2">2ª Geração</option>
+                <option value="ram-gen3">3ª Geração</option>
+            </select>
         </section>
 
         <!-- Seção de Placas-mãe -->
         <section id="placas-mae" class="conteudo-secao" style="display: none;">
             <h2>Placas-mãe</h2>
-            <p>Informações sobre placas-mãe...</p>
+            <p>Selecione a geração de placas-mãe para saber mais:</p>
+            <select id="geracao-placas-mae" onchange="mostrarGeracaoPlacasMae(this.value)">
+                <option value="">-- Escolha uma geração --</option>
+                <option value="mae-gen1">1ª Geração</option>
+                <option value="mae-gen2">2ª Geração</option>
+                <option value="mae-gen3">3ª Geração</option>
+            </select>
         </section>
 
         <!-- Seção de Fonte de Alimentação -->
         <section id="fonte-alimentacao" class="conteudo-secao" style="display: none;">
             <h2>Fonte de Alimentação</h2>
-            <p>Informações sobre fonte de alimentação...</p>
+            <p>Selecione a geração de fonte de alimentação para saber mais:</p>
+            <select id="geracao-fonte-alimentacao" onchange="mostrarGeracaoFonteAlimentacao(this.value)">
+                <option value="">-- Escolha uma geração --</option>
+                <option value="fonte-gen1">1ª Geração</option>
+                <option value="fonte-gen2">2ª Geração</option>
+                <option value="fonte-gen3">3ª Geração</option>
+            </select>
         </section>
 
         <section id="section1">
@@ -386,6 +410,199 @@
             const placasMae = document.getElementById('placas-mae');
             if (placasMae) {
                 placasMae.style.display = 'block';
+            }
+        }
+
+        function mostrarDetalhesFonteAlimentacao() {
+            const secoes = document.querySelectorAll('.conteudo-secao');
+            secoes.forEach(secao => secao.style.display = 'none');
+
+            const detalhesFonteAlimentacao = document.getElementById('detalhes-fonte-alimentacao');
+            const tituloFonteAlimentacao = document.getElementById('titulo-fonte-alimentacao');
+            const conteudoFonteAlimentacao = document.getElementById('conteudo-fonte-alimentacao');
+
+            if (detalhesFonteAlimentacao && tituloFonteAlimentacao && conteudoFonteAlimentacao) {
+                detalhesFonteAlimentacao.style.display = 'block';
+                tituloFonteAlimentacao.textContent = 'Detalhes sobre Fonte de Alimentação';
+                conteudoFonteAlimentacao.innerHTML = `
+                    <p>Informações detalhadas sobre fonte de alimentação...</p>
+                    <ul>
+                        <li>Fonte 1: Detalhes...</li>
+                        <li>Fonte 2: Detalhes...</li>
+                    </ul>
+                `;
+            }
+        }
+
+        function voltarParaFonteAlimentacao() {
+            const detalhesFonteAlimentacao = document.getElementById('detalhes-fonte-alimentacao');
+            if (detalhesFonteAlimentacao) {
+                detalhesFonteAlimentacao.style.display = 'none';
+            }
+
+            const fonteAlimentacao = document.getElementById('fonte-alimentacao');
+            if (fonteAlimentacao) {
+                fonteAlimentacao.style.display = 'block';
+            }
+        }
+
+        function mostrarGeracaoPlacasVideo(geracaoId) {
+            if (geracaoId) {
+                const secoes = document.querySelectorAll('.conteudo-secao');
+                secoes.forEach(secao => secao.style.display = 'none');
+
+                const detalhesPlacasVideo = document.getElementById('detalhes-placas-video');
+                const tituloPlacasVideo = document.getElementById('titulo-placas-video');
+                const conteudoPlacasVideo = document.getElementById('conteudo-placas-video');
+
+                if (detalhesPlacasVideo && tituloPlacasVideo && conteudoPlacasVideo) {
+                    detalhesPlacasVideo.style.display = 'block';
+
+                    switch (geracaoId) {
+                        case 'video-gen1':
+                            tituloPlacasVideo.textContent = '1ª Geração - Placas de Vídeo';
+                            conteudoPlacasVideo.innerHTML = `
+                                <p>Informações detalhadas sobre as placas de vídeo da 1ª geração...</p>
+                            `;
+                            break;
+                        case 'video-gen2':
+                            tituloPlacasVideo.textContent = '2ª Geração - Placas de Vídeo';
+                            conteudoPlacasVideo.innerHTML = `
+                                <p>Informações detalhadas sobre as placas de vídeo da 2ª geração...</p>
+                            `;
+                            break;
+                        case 'video-gen3':
+                            tituloPlacasVideo.textContent = '3ª Geração - Placas de Vídeo';
+                            conteudoPlacasVideo.innerHTML = `
+                                <p>Informações detalhadas sobre as placas de vídeo da 3ª geração...</p>
+                            `;
+                            break;
+                        default:
+                            tituloPlacasVideo.textContent = '';
+                            conteudoPlacasVideo.innerHTML = '';
+                            break;
+                    }
+                }
+            }
+        }
+
+        function mostrarGeracaoMemoriaRAM(geracaoId) {
+            if (geracaoId) {
+                const secoes = document.querySelectorAll('.conteudo-secao');
+                secoes.forEach(secao => secao.style.display = 'none');
+
+                const detalhesMemoriaRAM = document.getElementById('detalhes-memoria-ram');
+                const tituloMemoriaRAM = document.getElementById('titulo-memoria-ram');
+                const conteudoMemoriaRAM = document.getElementById('conteudo-memoria-ram');
+
+                if (detalhesMemoriaRAM && tituloMemoriaRAM && conteudoMemoriaRAM) {
+                    detalhesMemoriaRAM.style.display = 'block';
+
+                    switch (geracaoId) {
+                        case 'ram-gen1':
+                            tituloMemoriaRAM.textContent = '1ª Geração - Memória RAM';
+                            conteudoMemoriaRAM.innerHTML = `
+                                <p>Informações detalhadas sobre a memória RAM da 1ª geração...</p>
+                            `;
+                            break;
+                        case 'ram-gen2':
+                            tituloMemoriaRAM.textContent = '2ª Geração - Memória RAM';
+                            conteudoMemoriaRAM.innerHTML = `
+                                <p>Informações detalhadas sobre a memória RAM da 2ª geração...</p>
+                            `;
+                            break;
+                        case 'ram-gen3':
+                            tituloMemoriaRAM.textContent = '3ª Geração - Memória RAM';
+                            conteudoMemoriaRAM.innerHTML = `
+                                <p>Informações detalhadas sobre a memória RAM da 3ª geração...</p>
+                            `;
+                            break;
+                        default:
+                            tituloMemoriaRAM.textContent = '';
+                            conteudoMemoriaRAM.innerHTML = '';
+                            break;
+                    }
+                }
+            }
+        }
+
+        function mostrarGeracaoPlacasMae(geracaoId) {
+            if (geracaoId) {
+                const secoes = document.querySelectorAll('.conteudo-secao');
+                secoes.forEach(secao => secao.style.display = 'none');
+
+                const detalhesPlacasMae = document.getElementById('detalhes-placas-mae');
+                const tituloPlacasMae = document.getElementById('titulo-placas-mae');
+                const conteudoPlacasMae = document.getElementById('conteudo-placas-mae');
+
+                if (detalhesPlacasMae && tituloPlacasMae && conteudoPlacasMae) {
+                    detalhesPlacasMae.style.display = 'block';
+
+                    switch (geracaoId) {
+                        case 'mae-gen1':
+                            tituloPlacasMae.textContent = '1ª Geração - Placas-mãe';
+                            conteudoPlacasMae.innerHTML = `
+                                <p>Informações detalhadas sobre as placas-mãe da 1ª geração...</p>
+                            `;
+                            break;
+                        case 'mae-gen2':
+                            tituloPlacasMae.textContent = '2ª Geração - Placas-mãe';
+                            conteudoPlacasMae.innerHTML = `
+                                <p>Informações detalhadas sobre as placas-mãe da 2ª geração...</p>
+                            `;
+                            break;
+                        case 'mae-gen3':
+                            tituloPlacasMae.textContent = '3ª Geração - Placas-mãe';
+                            conteudoPlacasMae.innerHTML = `
+                                <p>Informações detalhadas sobre as placas-mãe da 3ª geração...</p>
+                            `;
+                            break;
+                        default:
+                            tituloPlacasMae.textContent = '';
+                            conteudoPlacasMae.innerHTML = '';
+                            break;
+                    }
+                }
+            }
+        }
+
+        function mostrarGeracaoFonteAlimentacao(geracaoId) {
+            if (geracaoId) {
+                const secoes = document.querySelectorAll('.conteudo-secao');
+                secoes.forEach(secao => secao.style.display = 'none');
+
+                const detalhesFonteAlimentacao = document.getElementById('detalhes-fonte-alimentacao');
+                const tituloFonteAlimentacao = document.getElementById('titulo-fonte-alimentacao');
+                const conteudoFonteAlimentacao = document.getElementById('conteudo-fonte-alimentacao');
+
+                if (detalhesFonteAlimentacao && tituloFonteAlimentacao && conteudoFonteAlimentacao) {
+                    detalhesFonteAlimentacao.style.display = 'block';
+
+                    switch (geracaoId) {
+                        case 'fonte-gen1':
+                            tituloFonteAlimentacao.textContent = '1ª Geração - Fonte de Alimentação';
+                            conteudoFonteAlimentacao.innerHTML = `
+                                <p>Informações detalhadas sobre as fontes de alimentação da 1ª geração...</p>
+                            `;
+                            break;
+                        case 'fonte-gen2':
+                            tituloFonteAlimentacao.textContent = '2ª Geração - Fonte de Alimentação';
+                            conteudoFonteAlimentacao.innerHTML = `
+                                <p>Informações detalhadas sobre as fontes de alimentação da 2ª geração...</p>
+                            `;
+                            break;
+                        case 'fonte-gen3':
+                            tituloFonteAlimentacao.textContent = '3ª Geração - Fonte de Alimentação';
+                            conteudoFonteAlimentacao.innerHTML = `
+                                <p>Informações detalhadas sobre as fontes de alimentação da 3ª geração...</p>
+                            `;
+                            break;
+                        default:
+                            tituloFonteAlimentacao.textContent = '';
+                            conteudoFonteAlimentacao.innerHTML = '';
+                            break;
+                    }
+                }
             }
         }
     </script>
