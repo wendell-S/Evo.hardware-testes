@@ -173,13 +173,13 @@ button:hover::before {
 }
 
 button:hover {
-    background-color: #108cde; /* Fundo do botão ao passar o mouse */
+    background-color: #006115; /* Fundo do botão ao passar o mouse */
     transform: scale(1.1); /* Aumentar levemente ao passar o mouse */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
 
 button:active {
-    background-color: #0509ff; /* Fundo cinza ao clicar */
+    background-color: #002401; /* Fundo cinza ao clicar */
     color: #ffffff; /* Texto claro */
     transform: scale(0.95); /* Reduzir levemente ao clicar */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */

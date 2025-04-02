@@ -286,3 +286,17 @@ function mostrarTodasGeracoes() {
     const secoesGeracoes = document.querySelectorAll('#section1, #section2, #section3, #section4, #section5');
     secoesGeracoes.forEach(secao => secao.style.display = 'block');
 }
+
+function mostrarGeracaoProcessadores(geracaoId) {
+    if (geracaoId) {
+        // Oculta todas as seções de conteúdo
+        const secoes = document.querySelectorAll('.conteudo-secao');
+        secoes.forEach(secao => secao.style.display = 'none');
+
+        // Mostra a seção da geração selecionada
+        const secaoSelecionada = document.getElementById(geracaoId);
+        if (secaoSelecionada) {
+            secaoSelecionada.style.display = 'block';
+        }
+    }
+}

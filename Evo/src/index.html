@@ -32,7 +32,15 @@
         <!-- Seção de Processadores -->
         <section id="processadores" class="conteudo-secao" style="display: none;">
             <h2>Processadores</h2>
-            <p>Informações sobre processadores...</p>
+            <p>Selecione a geração de processadores para saber mais:</p>
+            <select id="geracao-processadores" onchange="mostrarGeracaoProcessadores(this.value)">
+                <option value="">-- Escolha uma geração --</option>
+                <option value="section1">1ª Geração - Válvulas Eletrônicas</option>
+                <option value="section2">2ª Geração - Transistores</option>
+                <option value="section3">3ª Geração - Circuitos Integrados</option>
+                <option value="section4">4ª Geração - Microprocessadores</option>
+                <option value="section5">5ª Geração - Inteligência Artificial</option>
+            </select>
         </section>
 
         <!-- Seção de Placas de Vídeo -->
@@ -62,7 +70,7 @@
         <section id="section1">
             <h2>1ª Geração - Válvulas Electrónicas 1946 - 1957</h2>
             <div class="image-container">
-                <img src="/evo/src/imagens/ENIAC.png" alt="Válvulas de vácuo" class="responsive-img">
+                <img src="/Evo/src/imagens/ENIAC.png" alt="Válvulas de vácuo" class="responsive-img">
                 <img src="/evo/src/imagens/valvulas1940.png" alt="Válvula de vácuo" class="responsive-img">
             </div>
             <p>A Era das Válvulas (década de 1940): Os primeiros computadores, como o ENIAC, utilizavam válvulas de vácuo, componentes grandes, frágeis e que consumiam muita energia. Esses computadores eram enormes e realizavam cálculos simples, mas representaram um marco inicial na computação.</p>
@@ -144,6 +152,20 @@
             const secaoSelecionada = document.getElementById(id);
             if (secaoSelecionada) {
                 secaoSelecionada.style.display = 'block';
+            }
+        }
+
+        function mostrarGeracaoProcessadores(geracaoId) {
+            if (geracaoId) {
+                // Oculta todas as seções de conteúdo
+                const secoes = document.querySelectorAll('.conteudo-secao');
+                secoes.forEach(secao => secao.style.display = 'none');
+
+                // Mostra a seção da geração selecionada
+                const secaoSelecionada = document.getElementById(geracaoId);
+                if (secaoSelecionada) {
+                    secaoSelecionada.style.display = 'block';
+                }
             }
         }
     </script>
