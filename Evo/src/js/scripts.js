@@ -736,40 +736,63 @@ function mostrarGeracaoProcessadores(geracaoId) {
                             <li>Intel 8080 (1974): <br>
                             >Um processador de 8 bits que se tornou o "cérebro" do Altair 8800, um dos primeiros computadores pessoais.<br>
                             >Possuia maior capacidade de endereçamento de memória e um conjunto de instruções mais rico que seu antecessor, o 8008. <br>
+                            
+                            <img src="" alt="Descrição da imagem">
+
                             </li> <br>
 
                             <li>Motorola 6800 (1974): <br>
                             >Um concorrente direto do Intel 8080, também um processador de 8 bits.<br>
                             >Usado em diversos sistemas embarcados e nos primeiros computadores da Apple, com uma arquitetura considerada mais elegante por alguns.<br>
+                            
+                            <img src="" alt="Descrição da imagem">
+
                             </li> <br>
 
                             <li>Zilog Z80 (1976): <br>
                             >Uma evolução do Intel 8080, com um conjunto de instruções aprimorado e recursos adicionais.<br>
                             >Tornou-se extremamente popular em computadores pessoais como o TRS-80 e o Sinclair ZX Spectrum.<br>
+                            
+                            <img src="" alt="Descrição da imagem">
+
                             </li> <br>
 
                             <li>MOS Technology 6502 (1975): <br>
                             >Um processador de 8 bits de baixo custo que ganhou popularidade em computadores como o Apple II, o Commodore 64 e o Nintendo Entertainment System (NES).<br>
                             >Sua simplicidade e baixo preço o tornaram uma escolha popular para sistemas de jogos e computadores domésticos.<br>
+                            
+                            <img src="" alt="Descrição da imagem">
+                            
                             </li> <br>
 
                              <li>Intel Core i3: <br>
                             >Processadores de nível básico, ideais para tarefas cotidianas como navegação na web, edição de documentos e reprodução de mídia.<br>
                             >Geralmente com menos núcleos e recursos em comparação com os i5 e i7.<br>
-                            >Foco em custo benefício.<br>
-                            > geração 3: i3-2100, i3-2120, i3-2100T, i3-2310M.<br>
+                            >Foco em custo benefício.<br><br>
+                            > geração 2: i3-2100, i3-2120, i3-2100T, i3-2310M.<br>
+                            
+                            <img src="" alt="Descrição da imagem">
+                            
                             </li> <br>
 
                              <li>Intel Core i5: <br>
-                            ><br>
-                            ><br>
-                            ><br>
+                            >Processadores de gama média, oferecendo um bom equilíbrio entre desempenho e preço.<br>
+                            >Adequados para jogos, edição de fotos e vídeos leves, e multitarefa.<br>
+                            >Boa opção para a maioria dos usuários.<br><br>
+                            
+                            <img src="" alt="Descrição da imagem">
+                            
+                            >Geração 2: i5-2300, i5-2390T, i5-2400, i5-2400S, i5-2500, i5-2500K, i5-2500S, i5-2500T, i5-2410M, i5-2520M, i5-2537M, i5-2540M.<br>
                             </li> <br>
 
                              <li>Intel Core i7: <br>
-                            ><br>
-                            ><br>
-                            ><br>
+                            >Processadores de alto desempenho, projetados para tarefas exigentes como edição de vídeo profissional, modelagem 3D e jogos de última geração.<br>
+                            >Geralmente com mais núcleos, threads e recursos avançados.<br>
+                            >Foco em desempenho máximo.<br><br>
+                            
+                            <img src="" alt="Descrição da imagem">
+                            
+                            >Geração 2: i7-2600, i7-2600K, i7-2600S, i7-2617M, i7-2620M, i7-2629M, i7-2630QM, i7-2635QM, i7-2649M, i7-2657M, i7-2720QM, i7-2820QM, i7-2920XM.<br>
                             </li> <br>
                         </ul>
                     `;
@@ -779,8 +802,26 @@ function mostrarGeracaoProcessadores(geracaoId) {
                     conteudoGeracao.innerHTML = `
                         <p>Informações detalhadas sobre os processadores da 3ª geração...</p>
                         <ul>
-                            <li>Processador 1: Detalhes...</li>
-                            <li>Processador 2: Detalhes...</li>
+                             <li>Intel Core i3: <br>
+                            >Processadores de nível básico, ideais para tarefas cotidianas como navegação na web, edição de documentos e reprodução de mídia.<br>
+                            >Geralmente com menos núcleos e recursos em comparação com os i5 e i7.<br>
+                            >Foco em custo benefício.<br><br>
+                            >Geração 3: i3-3210, i3-3220, i3-3225, i3-3240, i3-3250, i3-3250T, i3-3320M, i3-3110M.
+                            </li> <br>
+
+                             <li>Intel Core i5: <br>
+                            >Processadores de gama média, oferecendo um bom equilíbrio entre desempenho e preço.<br>
+                            >Adequados para jogos, edição de fotos e vídeos leves, e multitarefa.<br>
+                            >Boa opção para a maioria dos usuários.<br><br>
+                            >Geração 3: i5-3330, i5-3330S, i5-3335, i5-3340, i5-3350P, i5-3450, i5-3450S, i5-3470, i5-3470S, i5-3475S, i5-3550, i5-3550S, i5-3570, i5-3570K, i5-3210M, i5-3230M, i5-3320M, i5-3340M, i5-3360M, i5-3380M, i5-3427U, i5-3437U, i5-3610ME.
+                            </li> <br>
+
+                             <li>Intel Core i7: <br>
+                            >Processadores de alto desempenho, projetados para tarefas exigentes como edição de vídeo profissional, modelagem 3D e jogos de última geração.<br>
+                            >Geralmente com mais núcleos, threads e recursos avançados.<br>
+                            >Foco em desempenho máximo.<br><br>
+                            >Geração 3: i7-3770, i7-3770K, i7-3770S, i7-3770T, i7-3820QM, i7-3840QM, i7-3920XM, i7-3940XM, i7-3517U, i7-3537U, i7-3610QM, i7-3612QM, i7-3615QM, i7-3630QM, i7-3632QM, i7-3720QM, i7-3740QM.
+                            </li>
                         </ul>
                     `;
                     break;
