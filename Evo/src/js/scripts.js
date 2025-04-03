@@ -733,19 +733,44 @@ function mostrarGeracaoProcessadores(geracaoId) {
                     conteudoGeracao.innerHTML = `
                         <p>Informações detalhadas sobre os processadores da 2ª geração...</p>
                         <ul>
-                            <li>Intel 8080: <br>
+                            <li>Intel 8080 (1974): <br>
                             >Um processador de 8 bits que se tornou o "cérebro" do Altair 8800, um dos primeiros computadores pessoais.<br>
                             >Possuia maior capacidade de endereçamento de memória e um conjunto de instruções mais rico que seu antecessor, o 8008. <br>
-                            </li> 
+                            </li> <br>
 
-                            <li>Motorola 6800: <br><br></li>
+                            <li>Motorola 6800 (1974): <br>
+                            >Um concorrente direto do Intel 8080, também um processador de 8 bits.<br>
+                            >Usado em diversos sistemas embarcados e nos primeiros computadores da Apple, com uma arquitetura considerada mais elegante por alguns.<br>
+                            </li> <br>
 
-                            <li>Zilog Z80: <br><br></li>
+                            <li>Zilog Z80 (1976): <br>
+                            >Uma evolução do Intel 8080, com um conjunto de instruções aprimorado e recursos adicionais.<br>
+                            >Tornou-se extremamente popular em computadores pessoais como o TRS-80 e o Sinclair ZX Spectrum.<br>
+                            </li> <br>
 
-                            <li>MOS Technology 6502: <br><br></li>
+                            <li>MOS Technology 6502 (1975): <br>
+                            >Um processador de 8 bits de baixo custo que ganhou popularidade em computadores como o Apple II, o Commodore 64 e o Nintendo Entertainment System (NES).<br>
+                            >Sua simplicidade e baixo preço o tornaram uma escolha popular para sistemas de jogos e computadores domésticos.<br>
+                            </li> <br>
 
-                            <li>Processador 1: Detalhes...</li>
-                            <li>Processador 2: Detalhes...</li>
+                             <li>Intel Core i3: <br>
+                            >Processadores de nível básico, ideais para tarefas cotidianas como navegação na web, edição de documentos e reprodução de mídia.<br>
+                            >Geralmente com menos núcleos e recursos em comparação com os i5 e i7.<br>
+                            >Foco em custo benefício.<br>
+                            > geração 3: i3-2100, i3-2120, i3-2100T, i3-2310M.<br>
+                            </li> <br>
+
+                             <li>Intel Core i5: <br>
+                            ><br>
+                            ><br>
+                            ><br>
+                            </li> <br>
+
+                             <li>Intel Core i7: <br>
+                            ><br>
+                            ><br>
+                            ><br>
+                            </li> <br>
                         </ul>
                     `;
                     break;
