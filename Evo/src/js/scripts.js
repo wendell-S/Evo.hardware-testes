@@ -293,10 +293,78 @@ function mostrarGeracaoProcessadores(geracaoId) {
         const secoes = document.querySelectorAll('.conteudo-secao');
         secoes.forEach(secao => secao.style.display = 'none');
 
-        // Mostra a seção da geração selecionada
-        const secaoSelecionada = document.getElementById(geracaoId);
-        if (secaoSelecionada) {
-            secaoSelecionada.style.display = 'block';
+        // Mostra a seção de detalhes da geração
+        const detalhesGeracao = document.getElementById('detalhes-geracao');
+        const tituloGeracao = document.getElementById('titulo-geracao');
+        const conteudoGeracao = document.getElementById('conteudo-geracao');
+
+        if (detalhesGeracao && tituloGeracao && conteudoGeracao) {
+            detalhesGeracao.style.display = 'block';
+
+            // Define o título e o conteúdo com base na geração selecionada
+            switch (geracaoId) {
+                case 'section1':
+                    tituloGeracao.textContent = '1ª Geração - Válvulas Eletrônicas';
+                    conteudoGeracao.innerHTML = `
+                        <p>Os processadores da 1ª geração utilizavam válvulas eletrônicas e marcaram o início da computação moderna.</p>
+                        <ul>
+                            <li>Intel 4004 (1971): Este é amplamente reconhecido como o primeiro microprocessador comercialmente disponível.</li>
+                            <li>Intel 8008 (1972): O sucessor do 4004, este processador de 8 bits representou um avanço significativo em capacidade de processamento.</li>
+                            <li>ENIAC (1946) - Primeiro computador eletrônico de grande escala.</li>
+                            <li>UNIVAC I (1951) - Primeiro computador comercial.</li>
+                            <li>IBM 701 (1952) - Primeiro computador da IBM.</li>
+                        </ul>
+                    `;
+                    break;
+                case 'section2':
+                    tituloGeracao.textContent = '2ª Geração - Transistores';
+                    conteudoGeracao.innerHTML = `
+                        <p>Os processadores da 2ª geração substituíram as válvulas por transistores, tornando os computadores menores e mais eficientes.</p>
+                        <ul>
+                            <li>IBM 1401 (1959) - Primeiro computador amplamente adotado.</li>
+                            <li>PDP-1 (1960) - Primeiro computador interativo.</li>
+                            <li>IBM System/360 (1964) - Introduziu a compatibilidade entre modelos.</li>
+                        </ul>
+                    `;
+                    break;
+                case 'section3':
+                    tituloGeracao.textContent = '3ª Geração - Circuitos Integrados';
+                    conteudoGeracao.innerHTML = `
+                        <p>Os processadores da 3ª geração utilizaram circuitos integrados, permitindo maior compactação e eficiência.</p>
+                        <ul>
+                            <li>Intel 4004 (1971) - Primeiro microprocessador comercial.</li>
+                            <li>Intel 8008 (1972) - Primeiro processador de 8 bits.</li>
+                            <li>IBM System/370 (1970) - Computador mainframe avançado.</li>
+                        </ul>
+                    `;
+                    break;
+                case 'section4':
+                    tituloGeracao.textContent = '4ª Geração - Microprocessadores';
+                    conteudoGeracao.innerHTML = `
+                        <p>Os processadores da 4ª geração introduziram os microprocessadores, revolucionando a computação pessoal.</p>
+                        <ul>
+                            <li>Intel 8080 (1974) - Base para os primeiros PCs.</li>
+                            <li>Intel 8086 (1978) - Arquitetura x86 amplamente utilizada.</li>
+                            <li>Motorola 68000 (1979) - Usado em computadores Apple e Atari.</li>
+                        </ul>
+                    `;
+                    break;
+                case 'section5':
+                    tituloGeracao.textContent = '5ª Geração - Inteligência Artificial';
+                    conteudoGeracao.innerHTML = `
+                        <p>Os processadores da 5ª geração focam em inteligência artificial e aprendizado de máquina.</p>
+                        <ul>
+                            <li>Intel Core i7 (2008) - Processador de alto desempenho.</li>
+                            <li>AMD Ryzen 9 (2019) - Processador multicore avançado.</li>
+                            <li>Apple M1 (2020) - Chip baseado em ARM com foco em eficiência.</li>
+                        </ul>
+                    `;
+                    break;
+                default:
+                    tituloGeracao.textContent = '';
+                    conteudoGeracao.innerHTML = '';
+                    break;
+            }
         }
     }
 }
