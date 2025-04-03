@@ -733,6 +733,17 @@ function mostrarGeracaoProcessadores(geracaoId) {
                     conteudoGeracao.innerHTML = `
                         <p>Informações detalhadas sobre os processadores da 2ª geração...</p>
                         <ul>
+                            <li>Intel 8080: <br>
+                            >Um processador de 8 bits que se tornou o "cérebro" do Altair 8800, um dos primeiros computadores pessoais.<br>
+                            >Possuia maior capacidade de endereçamento de memória e um conjunto de instruções mais rico que seu antecessor, o 8008. <br>
+                            </li> 
+
+                            <li>Motorola 6800: <br><br></li>
+
+                            <li>Zilog Z80: <br><br></li>
+
+                            <li>MOS Technology 6502: <br><br></li>
+
                             <li>Processador 1: Detalhes...</li>
                             <li>Processador 2: Detalhes...</li>
                         </ul>
