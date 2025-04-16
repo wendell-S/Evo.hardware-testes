@@ -559,9 +559,11 @@ function mostrarGeracaoPlacasVideo(geracaoId) {
 
 function mostrarGeracaoMemoriaRAM(geracaoId) {
     if (geracaoId) {
+        // Oculta todas as seções de conteúdo
         const secoes = document.querySelectorAll('.conteudo-secao');
         secoes.forEach(secao => secao.style.display = 'none');
 
+        // Mostra a seção de detalhes da geração de memória RAM
         const detalhesMemoriaRAM = document.getElementById('detalhes-memoria-ram');
         const tituloMemoriaRAM = document.getElementById('titulo-memoria-ram');
         const conteudoMemoriaRAM = document.getElementById('conteudo-memoria-ram');
@@ -569,47 +571,62 @@ function mostrarGeracaoMemoriaRAM(geracaoId) {
         if (detalhesMemoriaRAM && tituloMemoriaRAM && conteudoMemoriaRAM) {
             detalhesMemoriaRAM.style.display = 'block';
 
+            // Define o título e o conteúdo com base na geração selecionada
             switch (geracaoId) {
-                case 'ram-gen':
-                    tituloGeracao.textContent = '1ª Geração - memoria ram';
-                    conteudoGeracao.innerHTML = `
-                        <p>Informações detalhadas sobre memoria ram da 1ª geração...</p>
-                        <ul>
-                            <li> MEMORIA RAM AQUI<br> 
-                          TEXTO AQUI
-                        </ul>
-                        <img src=" UL DA FOTO AQUI" alt="Descrição da imagem">
-
-                        <li>MEMORIA RAM AQUI<br>
-                        TEXTO AQUI
-                        <img src="UL DA FOTO AQUI" alt="Descrição da imagem">
-                    `;
-                    break;
                 case 'ram-gen1':
-                    tituloGeracao.textContent = '1ª Geração - memoria ram';
-                    conteudoGeracao.innerHTML = `
-                        <p>Informações detalhadas sobre memoria ram da 1ª geração...</p>
+                    tituloMemoriaRAM.textContent = '1ª Geração - Memória RAM';
+                    conteudoMemoriaRAM.innerHTML = `
+                        <p>A 1ª geração de memória RAM utilizava tecnologias como ferrite magnético e era caracterizada por baixa capacidade e alta latência.</p>
                         <ul>
-                            <li> MEMORIA RAM AQUI<br> 
-                          TEXTO AQUI
+                            <li>Memória de Núcleo Magnético: Utilizada em computadores da década de 1950 e 1960.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN1" alt="Memória de Núcleo Magnético">
                         </ul>
-                        <img src=" UL DA FOTO AQUI" alt="Descrição da imagem">
-
-                        <li>MEMORIA RAM AQUI<br>
-                        TEXTO AQUI
-                        <img src="UL DA FOTO AQUI" alt="Descrição da imagem">
                     `;
                     break;
                 case 'ram-gen2':
                     tituloMemoriaRAM.textContent = '2ª Geração - Memória RAM';
                     conteudoMemoriaRAM.innerHTML = `
-                        <p>Informações detalhadas sobre a memória RAM da 2ª geração...</p>
+                        <p>A 2ª geração introduziu a memória de semicondutores, como SRAM e DRAM, que eram mais rápidas e compactas.</p>
+                        <ul>
+                            <li>SRAM (Static RAM): Memória rápida, mas cara, usada em caches.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN2" alt="SRAM">
+                            <li>DRAM (Dynamic RAM): Mais barata e usada como memória principal.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN2_DRAM" alt="DRAM">
+                        </ul>
                     `;
                     break;
                 case 'ram-gen3':
                     tituloMemoriaRAM.textContent = '3ª Geração - Memória RAM';
                     conteudoMemoriaRAM.innerHTML = `
-                        <p>Informações detalhadas sobre a memória RAM da 3ª geração...</p>
+                        <p>A 3ª geração trouxe melhorias significativas em velocidade e capacidade, com a introdução de tecnologias como DDR.</p>
+                        <ul>
+                            <li>DDR (Double Data Rate): Aumentou a largura de banda transferindo dados em ambas as bordas do clock.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN3" alt="DDR">
+                        </ul>
+                    `;
+                    break;
+                case 'ram-gen4':
+                    tituloMemoriaRAM.textContent = '4ª Geração - Memória RAM';
+                    conteudoMemoriaRAM.innerHTML = `
+                        <p>A 4ª geração introduziu DDR2 e DDR3, com maior eficiência energética e maior largura de banda.</p>
+                        <ul>
+                            <li>DDR2: Melhor eficiência energética e maior frequência.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN4_DDR2" alt="DDR2">
+                            <li>DDR3: Frequência ainda maior e menor consumo de energia.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN4_DDR3" alt="DDR3">
+                        </ul>
+                    `;
+                    break;
+                case 'ram-gen5':
+                    tituloMemoriaRAM.textContent = '5ª Geração - Memória RAM';
+                    conteudoMemoriaRAM.innerHTML = `
+                        <p>A 5ª geração trouxe DDR4 e DDR5, com foco em maior desempenho e menor consumo de energia.</p>
+                        <ul>
+                            <li>DDR4: Frequência mais alta e maior capacidade por módulo.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN5_DDR4" alt="DDR4">
+                            <li>DDR5: Introduzida recentemente, com ainda maior largura de banda e eficiência.</li>
+                            <img src="URL_DA_IMAGEM_RAM_GEN5_DDR5" alt="DDR5">
+                        </ul>
                     `;
                     break;
                 default:
