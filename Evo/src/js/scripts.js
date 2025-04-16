@@ -570,6 +570,21 @@ function mostrarGeracaoMemoriaRAM(geracaoId) {
             detalhesMemoriaRAM.style.display = 'block';
 
             switch (geracaoId) {
+                case 'ram-gen':
+                    tituloGeracao.textContent = '1ª Geração - memoria ram';
+                    conteudoGeracao.innerHTML = `
+                        <p>Informações detalhadas sobre memoria ram da 1ª geração...</p>
+                        <ul>
+                            <li> MEMORIA RAM AQUI<br> 
+                          TEXTO AQUI
+                        </ul>
+                        <img src=" UL DA FOTO AQUI" alt="Descrição da imagem">
+
+                        <li>MEMORIA RAM AQUI<br>
+                        TEXTO AQUI
+                        <img src="UL DA FOTO AQUI" alt="Descrição da imagem">
+                    `;
+                    break;
                 case 'ram-gen1':
                     tituloGeracao.textContent = '1ª Geração - memoria ram';
                     conteudoGeracao.innerHTML = `
