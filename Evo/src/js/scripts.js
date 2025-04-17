@@ -576,10 +576,16 @@ function mostrarGeracaoMemoriaRAM(geracaoId) {
                 case 'ram-gen1':
                     tituloMemoriaRAM.textContent = '1ª Geração - Memória RAM';
                     conteudoMemoriaRAM.innerHTML = `
-                        <p>A 1ª geração de memória RAM utilizava tecnologias como ferrite magnético e era caracterizada por baixa capacidade e alta latência.</p>
+                        <p>PC66: Operava a uma velocidade de barramento de 66 MHz, resultando em uma taxa de transferência de dados de até 528 MB/s (66 MHz x 64 bits / 8 bits por byte).</p>
                         <ul>
                             <li>Memória de Núcleo Magnético: Utilizada em computadores da década de 1950 e 1960.</li>
-                            <img src="URL_DA_IMAGEM_RAM_GEN1" alt="Memória de Núcleo Magnético">
+                            <img src="https://i.ebayimg.com/thumbs/images/g/TpcAAOSwNPBnNXQp/s-l1200.jpg" alt="Memória de Núcleo Magnético">
+                        </ul> <br>
+
+                         <p>PC100: Operava a uma velocidade de barramento de 100 MHz, resultando em uma taxa de transferência de dados de até 800 MB/s (100 MHz x 64 bits / 8 bits por byte).</p>
+                        <ul>
+                            <li>Memória de Núcleo Magnético: Utilizada em computadores da década de 1950 e 1960.</li>
+                            <img src="https://i.ebayimg.com/thumbs/images/g/TpcAAOSwNPBnNXQp/s-l1200.jpg" alt="Memória de Núcleo Magnético">
                         </ul>
                     `;
                     break;
