@@ -375,6 +375,12 @@ h1.evolucao {
     #menu {
         flex-direction: column; /* Empilhar os botões verticalmente */
         gap: 0.5rem; /* Reduzir o espaçamento entre os botões */
+        align-items: center; /* Centralizar os botões */
+    }
+
+    #menu button {
+        width: 90%; /* Ajustar a largura para ocupar 90% da tela */
+        max-width: 300px; /* Limitar a largura máxima */
     }
 
     footer {
