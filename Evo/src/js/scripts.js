@@ -2,6 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para alterar o conteúdo de um elemento
     document.getElementById('myElement').textContent = 'Conteúdo alterado pelo JavaScript';
 
+    // Ajustar elementos dinamicamente para telas menores
+    function adjustForMobile() {
+        const isMobile = window.innerWidth <= 768;
+        const sections = document.querySelectorAll('section');
+        const buttons = document.querySelectorAll('button');
+
+        sections.forEach(section => {
+            section.style.padding = isMobile ? '1rem' : '2rem';
+        });
+
+        buttons.forEach(button => {
+            button.style.fontSize = isMobile ? '0.9rem' : '1rem';
+            button.style.padding = isMobile ? '0.6rem 1rem' : '0.8rem 1.5rem';
+        });
+    }
+
+    // Chamar a função ao carregar e redimensionar a janela
+    adjustForMobile();
+    window.addEventListener('resize', adjustForMobile);
+
     // Função para rolar entre seções
     const sections = document.querySelectorAll('section');
     let currentSection = 0;
