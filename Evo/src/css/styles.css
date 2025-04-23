@@ -103,6 +103,14 @@ section .image-container {
     flex-wrap: wrap; /* Ajustar para dispositivos móveis */
 }
 
+.image-container img {
+    display: none; /* Ocultar todas as imagens inicialmente */
+}
+
+.image-container img:first-child {
+    display: block; /* Mostrar apenas a primeira imagem */
+}
+
 section img {
     width: 45%; /* Ajustar a largura para ambas as imagens */
     height: auto;
@@ -227,7 +235,7 @@ h1.evolucao {
     font-size: 2.5rem; /* Aumentar o tamanho da fonte */
     font-weight: bold; /* Tornar o texto mais destacado */
     text-align: center; /* Centralizar o título */
-    background: linear-gradient(to right, #ff4c4c, #2196f3); /* Adicionar gradiente */
+    background: linear-gradient(to right, #ffffff, #d3d3d3); /* Gradiente branco para cinza */
     -webkit-background-clip: text; /* Aplicar gradiente apenas ao texto */
     -webkit-text-fill-color: transparent; /* Tornar o fundo do texto transparente */
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionar sombra */

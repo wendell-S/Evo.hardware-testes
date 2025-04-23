@@ -2,6 +2,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para alterar o conteúdo de um elemento
     document.getElementById('myElement').textContent = 'Conteúdo alterado pelo JavaScript';
 
+    // Sistema de rotação automática de imagens
+    function rotateImages() {
+        const imageContainers = document.querySelectorAll('.image-container img');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            imageContainers.forEach((img, index) => {
+                img.style.display = index === currentIndex ? 'block' : 'none';
+            });
+            currentIndex = (currentIndex + 1) % imageContainers.length;
+        }, 3000); // Troca de imagem a cada 3 segundos
+    }
+
+    // Iniciar rotação automática de imagens na primeira aba
+    const firstTabImages = document.querySelectorAll('#section1 .image-container img');
+    if (firstTabImages.length > 0) {
+        rotateImages();
+    }
+
     // Ajustar elementos dinamicamente para telas menores
     function adjustForMobile() {
         const isMobile = window.innerWidth <= 768;
