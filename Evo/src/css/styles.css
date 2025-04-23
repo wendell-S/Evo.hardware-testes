@@ -224,8 +224,15 @@ footer {
 }
 
 h1.evolucao {
-    color: #ff4c4c; /* Cor vermelha estática */
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(76, 175, 80, 0.5); /* Adicionar sombra com desfoque */
+    font-size: 2.5rem; /* Aumentar o tamanho da fonte */
+    font-weight: bold; /* Tornar o texto mais destacado */
+    text-align: center; /* Centralizar o título */
+    background: linear-gradient(to right, #ff4c4c, #2196f3); /* Adicionar gradiente */
+    -webkit-background-clip: text; /* Aplicar gradiente apenas ao texto */
+    -webkit-text-fill-color: transparent; /* Tornar o fundo do texto transparente */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionar sombra */
+    margin-bottom: 1.5rem; /* Espaçamento inferior */
+    animation: fadeIn 2s ease-in-out; /* Animação de fade-in */
 }
 
 #game-banner {
