@@ -45,6 +45,9 @@ if __name__ == "__main__":
 
     # Gera os códigos
     codes = generate_discord_codes(num_codes_to_generate, blacklist)
+    for i in range(0, len(codes), 10000):
+        if len(codes) % 10000 == 0:
+            print(f"{len(codes)} códigos gerados...")
 
     # Salva os códigos gerados
     save_to_file(codes, filename)
