@@ -18,9 +18,12 @@ def generate_discord_codes(num_codes, blacklist=set()):
     return codes
 
 def save_to_file(codes, filename):
-    with open(filename, 'a') as file:
-        for code in codes:
-            file.write(code + '\n')
+    try:
+        with open(filename, 'a') as file:
+            for code in codes:
+                file.write(code + '\n')
+    except IOError as e:
+        print(f"Erro ao salvar no arquivo {filename}: {e}")
 
 def load_blacklist(filename):
     if not os.path.exists(filename):
